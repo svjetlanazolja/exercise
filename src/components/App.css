@@ -1,0 +1,26 @@
+.fruits-container,
+.counter {
+  margin: 30px;
+}
+
+.fruit-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.fruit-list-container div {
+  width: 180px;
+  margin-right: 30px;
+}
+
+.counter input,
+.form-container input {
+  margin: 5px 20px 5px 5px;
+  padding: 5px 15px;
+}
+
+.counter button,
+.fruit-button {
+  padding: 5px 15px;
+}
