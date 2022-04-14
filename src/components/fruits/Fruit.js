@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Modal from "./overlays/Modal";
+import Modal from "../overlays/Modal";
 
 const Fruit = ({ name, native, color }) => {
   const [showModalFruit, setShowModalFruit] = useState(false);

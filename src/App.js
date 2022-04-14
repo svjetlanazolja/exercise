@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import Fruits from "./components/Fruits";
+import Fruits from "./components/fruits/Fruits";
 import "././components/App.css";
-import NewCounterForm from "./components/NewCounterForm";
-import CounterList from "./components/CounterList";
+import NewCounterForm from "./components/counter/NewCounterForm";
+import CounterList from "./components/counter/CounterList";
 import LoginForm from "./components/Login/LoginForm";
+import TimerList from "./components/timer/TimerList";
+import TimerListtt from "./components/Timer2/TimerListtt";
 
 function App() {
   const [caunterValues, setCaunterValues] = useState([]);
@@ -48,11 +50,15 @@ function App() {
               counterValues={caunterValues}
               onRemoveCounter={removeCounterHandler}
             />
+            <TimerList />
+            <TimerListtt />
           </div>
+
         </>
       ) : (
         <LoginForm onLogin={loginHandler} />
       )}
+
     </>
   );
 }

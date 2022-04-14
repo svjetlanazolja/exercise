@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import Modal from "./overlays/Modal";
+import Modal from "../overlays/Modal";
 
 const Form = (props) => {
   const [isModalShow, SetIsModalShow] = useState(false);
