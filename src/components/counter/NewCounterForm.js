@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { useState } from "react";
-import StatsContext from "../../context/stats_context";
+import StatsContext from "../../context/stats_context"
 
 const NewCounterForm = (props) => {
   const [incrementStep, setIncrementStep] = useState("");
-  const StatsContext = useContext(StatsContext)
+  const statsContext = useContext(StatsContext)
 
   const incrementChangeHandler = (e) => {
     setIncrementStep(+e.target.value);
@@ -15,7 +15,7 @@ const NewCounterForm = (props) => {
     props.onAddCounterValue(incrementStep);
     // console.log(incrementStep);
 
-    StatsContext.setCounterAmount(prevState => prevState + 1)
+    statsContext.setCounterAmount(prevState => prevState + 1)
     setIncrementStep("");
   };
 
