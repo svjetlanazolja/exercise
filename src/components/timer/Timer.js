@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
+import StatsContext from "../../context/stats_context";
 import TimerLap from "./TimerLap";
 
 const Timer = () => {
@@ -6,8 +7,9 @@ const Timer = () => {
     const [isRunning, setIsRunning] = useState(false);
     const [laps, setLaps] = useState([]);
     const prevlapTotal = useRef(0);
-    const minDuration = useRef(-1);
-    const maxDuration = useRef(-1);
+    const minDuration = useRef(0);
+    const maxDuration = useRef(0);
+    const context = useContext(StatsContext)
 
     useEffect(() => {
         let id;
@@ -44,7 +46,7 @@ const Timer = () => {
         }
 
         setLaps(prevState => [...prevState, { total: timerValue, duration: currentLapDuration }])
-
+        context.incrementTimerLaps()
     }
 
     return (
