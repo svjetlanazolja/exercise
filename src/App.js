@@ -5,7 +5,7 @@ import NewCounterForm from "./components/counter/NewCounterForm";
 import CounterList from "./components/counter/CounterList";
 import LoginForm from "./components/Login/LoginForm";
 import TimerList from "./components/timer/TimerList";
-import TimerListtt from "./components/Timer2/TimerListtt";
+
 import MainStats from "./components/stats/MainStats";
 
 const INITIAL_STATE = {
@@ -141,7 +141,7 @@ function App() {
               />
               <MainStats />
               <TimerList />
-              <TimerListtt />
+
               <button onClick={loginHandler} >Logout</button>
             </div>
           </div>

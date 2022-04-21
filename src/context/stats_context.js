@@ -6,7 +6,8 @@ const StatsContext = React.createContext(
         timersAmount: 0,
         timersLaps: 0,
         setCounterAmount: () => { },
-        incrementTimerLaps: () => { }
+        incrementTimerLaps: () => { },
+        setTimersAmount: () => { }
     }
 );
 
@@ -27,7 +28,8 @@ export const StatsContextProvider = (props) => {
                 timersAmount: timersAmount,
                 timersLaps: timersLaps,
                 setCounterAmount,
-                incrementTimerLaps
+                incrementTimerLaps,
+                setTimersAmount
             }
         }>
             {props.children}

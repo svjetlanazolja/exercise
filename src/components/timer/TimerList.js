@@ -1,5 +1,6 @@
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useContext } from "react"
 import Timer from "./Timer";
+import StatsContext from "../../context/stats_context";
 
 const TimerList = () => {
     // const idAutoIncrement = useRef(0);
@@ -11,10 +12,12 @@ const TimerList = () => {
 
     const idAutoIncrement = useRef(0);
     const [timers, setTimers] = useState([]);
+    const context = useContext(StatsContext);
 
     const addTimerHandler = () => {
         idAutoIncrement.current++;
         setTimers(prevState => [...prevState, idAutoIncrement.current])
+        context.setTimersAmount(prevState => prevState + 1)
     }
 
     const handleKeyDown = (e) => {

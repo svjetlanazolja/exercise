@@ -7,7 +7,7 @@ const TimerStats = () => {
     return (
         <>
             <div>Timer Laps: {timersLaps}</div>
-            <div>Timer Amount: 0</div>
+            <div>Timer Amount: {timersAmount}</div>
         </>
     )
 
