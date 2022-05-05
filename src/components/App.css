@@ -24,3 +24,9 @@
 .fruit-button {
   padding: 5px 15px;
 }
+
+.logout {
+  display: flex;
+  justify-content: flex-end;
+  margin: 40px 40px 20px 20px;
+}

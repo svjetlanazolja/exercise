@@ -130,6 +130,7 @@ function App() {
       <div className="login-container">
         {loginState.isLoggedIn ? (
           <div>
+            <div className="logout"><button onClick={loginHandler} >Logout</button></div>
             <div className="fruits-container">
               <Fruits />
             </div>
@@ -142,7 +143,7 @@ function App() {
               <MainStats />
               <TimerList />
 
-              <button onClick={loginHandler} >Logout</button>
+
             </div>
           </div>
         ) : (
